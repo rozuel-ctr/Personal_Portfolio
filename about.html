@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      opacity: 0; 
+      animation: fadeIn 1s ease-in-out forwards; 
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    header {
+      padding: 20px;
+      font-size: 18px;
+      color: #000;
+      text-align: center;
+    }
+
+    .about-section {
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      flex-wrap: wrap;
+      flex: 1;
+      transition: background-color 0.3s ease, padding 0.3s ease;
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 280px;
+      max-width: 600px;
+      margin: 20px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .about-text h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .about-img {
+      flex: 1;
+      min-width: 200px;
+      max-width: 200px;
+      margin: 20px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .about-img img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .buttons-section {
+      display: flex;
+      justify-content: space-around;
+      background-color: white;
+      padding: 30px 10px;
+      flex-wrap: wrap;
+    }
+
+    .button-box {
+      background-color: #000;
+      color: #ffd700;
+      padding: 20px;
+      margin: 10px;
+      text-align: center;
+      font-size: 18px;
+      width: 150px;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s, transform 0.3s ease;
+    }
+
+    .button-box:hover {
+      background-color: #ffd700;
+      color: #000;
+      transform: scale(1.1);
+    }
+
+    .footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .about-section {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .about-text, .about-img {
+        flex: none;
+        max-width: 100%;
+        margin: 10px auto;
+      }
+
+      .about-text h2 {
+        font-size: 24px;
+      }
+
+      .about-text p {
+        font-size: 14px;
+      }
+
+      .buttons-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .button-box {
+        width: 80%;
+        margin: 10px 0;
+      }
+
+      .footer {
+        font-size: 12px;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>ABOUT ME</header>
+
+  <section class="about-section">
+    <div class="about-text">
+      <h2>HI, I'M SHAWN</h2>
+      <p>
+        A first-year Information Technology student with a growing passion for software development. I'm eager to learn,
+        explore new technologies, and build skills that will help me create innovative solutions.<br><br>
+        Currently, I'm focusing on mastering C programming, understanding algorithms. I enjoy playing games, dancing,
+        exploring creative ideas, which inspire my curiosity and drive to improve.<br><br>
+        This is just the beginning of my journey, and I'm excited about the opportunities ahead. Let's connect and learn
+        together!
+      </p>
+    </div>
+    <div class="about-img">
+      <img src="image/profilepic.png" alt="Shawn Photo">
+    </div>
+  </section>
+
+  <section class="buttons-section">
+    <a href="skills.html" class="button-box">SKILLS</a>
+    <a href="experiences.html" class="button-box">EXPERIENCES</a>
+    <a href="credentials.html" class="button-box">CREDENTIALS</a>
+    <a href="contact.html" class="button-box">CONTACT</a>
+  </section>
+
+  <footer class="footer">
+    <p>&copy;2025 SHAWN PIGAR | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

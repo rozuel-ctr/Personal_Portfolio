@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    html {
+      font-size: 50%;
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: black;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      opacity: 0; 
+      animation: fadeIn 1s ease-in-out forwards; 
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .header {
+      width: 100%;
+      top: 0;
+      padding: 1.5rem 0;
+      background: linear-gradient(90deg, #000, #333);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .navbar {
+      display: flex;
+      gap: 3rem;
+    }
+
+    .navbar a {
+      font-size: 1.8rem;
+      color: white;
+      font-weight: 500;
+      text-transform: uppercase;
+      transition: 0.3s ease-in-out;
+      border-bottom: 3px solid transparent;
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    .navbar a:hover {
+      color: #ffd700;
+      border-bottom: 3px solid #ffd700;
+      transform: scale(1.1);
+    }
+
+    .navbar a:active {
+      color: #ffcc00;
+      border-bottom: 3px solid #ffcc00;
+    }
+
+    .skills-section {
+      background-color: #000;
+      padding: 40px;
+      text-align: center;
+      flex: 1;
+      transition: background-color 0.3s ease, padding 0.3s ease;
+    }
+
+    .skills-section h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #ffd700;
+    }
+
+    .skills-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .skills-category {
+      background-color: white;
+      color: black;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 1px 0px 11px 2px rgba(255, 215, 0, 1);
+      -webkit-box-shadow: 1px 0px 11px 2px rgba(255, 215, 0, 1);
+      -moz-box-shadow: 1px 0px 11px 2px rgba(255, 215, 0, 1);
+      width: 300px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .skills-category:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px 5px rgba(255, 215, 0, 1);
+    }
+
+    .skills-category h3 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #000;
+    }
+
+    .skills-category ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skills-category ul li {
+      font-size: 16px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .skills-category ul li span {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .footer {
+      background-color: #fff;
+      color: #000;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .skills-container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .skills-category {
+        width: 90%;
+        margin: 0 auto;
+        padding: 15px;
+      }
+
+      .skills-category h3 {
+        font-size: 18px;
+      }
+
+      .skills-category ul li {
+        font-size: 14px;
+      }
+
+      .footer {
+        font-size: 12px;
+        padding: 15px;
+      }
+
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .navbar a {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+        <a href="about.html">ABOUT ME</a>
+        <a href="skills.html">SKILLS</a>
+        <a href="experiences.html">EXPERIENCE</a>
+        <a href="credentials.html">CREDENTIALS</a>
+        <a href="contact.html">CONTACT</a> 
+    </nav>
+  </header>
+
+  <section id="skills" class="skills-section">
+    <h1>SKILLS</h1>
+    <div class="skills-container">
+      <div class="skills-category">
+        <h3>Soft Skills</h3>
+        <ul>
+          <li><span>✔</span> Social communication</li>
+          <li><span>✔</span> Active listening</li>
+          <li><span>✔</span> Time management</li>
+        </ul>
+      </div>
+
+      <div class="skills-category">
+        <ul>
+          <h3>Hard Skills</h3>
+          <li><span>✔</span> Basic C language</li>
+          <li><span>✔</span> Basic HTML AND CSS</li>
+          <li><span>✔</span> System Troubleshooting</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <p>&copy;2025 SHAWN PIGAR | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
